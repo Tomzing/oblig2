@@ -1,0 +1,182 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "header header header header"
+        "nav nav nav nav"
+        "main main main aside"
+        "footer footer footer footer";
+    grid-gap: 2px;
+    max-width: 80%;
+    margin: 0 auto;    
+}
+
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: solid;
+    background-image: url("../bilder/bannerbilde.jpg");
+}
+
+header h1 {
+    font-size: 50px;
+    color: rgb(27, 247, 27);
+    -webkit-text-stroke: rgb(71, 58, 250);
+    -webkit-text-stroke-width: 2px;
+}
+
+nav {
+    grid-area: nav;
+    display: grid;
+    display: inline-block;
+    /*grid-template-columns: repeat(auto-fill, minmax);*/
+    /*grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;*/
+    border: solid;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    text-align: center;
+}
+
+body nav a {
+    background-color: #32fa00;
+	border-radius: 3px;
+	border: 1px solid #177445;
+	display: inline-block;
+	color: black;
+	font-family:Arial;
+	font-size: 13px;
+	padding: 9px 24px;
+	text-decoration: none;
+    text-shadow: 0px 1px 0px #08274d;
+    width: 20%;
+}
+
+body nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Stilerer boksene til aa bli flex i main*/
+main article {
+    border: solid;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin-inline-end: 10px;
+    margin-top: 10px;
+}
+
+/* For artikkel sidene utenom index */
+main.singlearticle {
+    grid-template-columns: 1fr;
+}
+/* For artikkel sidene utenom index */
+main.singlearticle article#bigarticle h2 {
+    border: none;
+}
+
+
+
+main article h2 {
+    margin: 7px;
+}
+
+main article p {
+    border: solid;
+    padding: 5px;
+    margin: 8px;
+    height: 75px;
+    max-height: 150px;
+    overflow: scroll;
+}
+
+/* For artikkel sidene utenom index */
+main.singlearticle article#bigarticle p#brodtekstartikkel {
+    border: none;
+    overflow: show;
+    max-height: none;
+    height: 500px;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+/*main article a {
+    margin-top: 2px;
+}*/
+
+aside {
+    grid-area: aside;
+    display: grid;
+    grid-template-columns: 1fr;
+    border: solid;
+    margin-top: 10px;
+}
+
+/*Googlet det aa gjoore en iframe mer responsivt. Det som skjer her naa er at den vil
+vaere responsiv helt til den ikke klarer aa beholde 16.9 aspect ratio paa iframen*/
+aside .youtube {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+    display: inline-block;
+}
+/* --*-- */
+aside .youtube .responsiviframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: 0;
+}
+
+/* --*-- */
+aside .youtube responsiviframe:hover {
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+}
+
+aside section#knappgithub {
+    margin: 5px;
+    border: solid;
+    text-align: center;
+    max-height: 35px;
+    display: inline-block;
+    background-color: rgb(136, 255, 136);
+}
+
+aside section#knappgithub a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: red;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+aside section#knappgithub a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr;
+    clear: both;
+    border: solid;
+    text-align: center;
+    margin-top: 10px;
+    background-color: gainsboro;
+}
+
