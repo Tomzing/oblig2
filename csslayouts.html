@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Oblig 2</title>
     <link rel="stylesheet" type="text/css" href="stilsett/hovedstilsett.css">
-    <link href="print.css" rel="stylesheet" media="print" />
+    <link href="stilsett/print.css" rel="stylesheet" media="print">
 </head>
 <body>
     <header>
-        <h1>Oblig 2 - Index</h1>
+        <h1>Oblig 2 - CSS Layouts</h1>
     </header>
     <nav>
         <a href="index.html">Hjem</a>
@@ -18,32 +18,28 @@
         <a href="mediatyper.html">Media Typer</a>
         <a href="csslayouts.html">CSS Layouts</a>
     </nav>
-    <main>
-        <article class="indexartikkel">
-            <h2>Github</h2>
-            <img src="./bilder/octocat.png" class="indexillubilde" alt="octocat">
-            <p class="indexparagraph">
-                Bla bla bla om github
+    <main class="artikkelmain">
+        <article id="hovedartikkel">
+            <h3 class="storartikkelh3">CSS Layouts</h3>
+            <p id="brodtekstartikkel">
+                Den første forskjellen man må bemerke seg er at Flexbox er laget
+                for en dimensjon mens Grid er laget for to dimensjonale layouter.
+                Dette betyr at hvis du legger ut ting i en retning, for eksempel
+                tre knapper innenfor en header, så burde du bruke Flexbox.
+                <img class="csslayoutsbilde1" src="bilder/flexboxeksempel.png" alt="Flexbox eksempel">
+                <br />
+                Det kommer til å gi deg mer fleksibilitet (hah) enn CSS Grid. Det er
+                også mer håndterbart og krever mindre koding. Men hvis du skal lage en layout
+                i to dimensjoner, med både rader og kolonner, da burde du bruke CSS Grid.
+                <img class="csslayoutsbilde2" src="bilder/grideksempel.png" alt="Grid eksempel">
+                <br />
+                <br />
+                I eksempelet over så vil CSS Grid gi deg mer fleksibilitet og gjør kodingen
+                simplere og lettere å håndtere. Det beste er å bruke en kombinasjon av begge.
+                Bruk Grid for side layouten og heller bruk Flexbox inne i en header.
+
             </p>
-            <a href="github.html">Les mer!</a>
         </article>
-        <article class="indexartikkel">
-            <h2>Media typer</h2>
-            <img src="./bilder/printlogo.png" class="indexillubilde" alt="octocat">
-            <p class="indexparagraph">
-                Bla bla bla om media typer
-            </p>
-            <a href="mediatyper.html">Les mer!</a>
-        </article>        
-        <article class="indexartikkel">
-            <h2>CSS layouts</h2>
-            <img src="./bilder/css3logo.png" class="indexillubilde" alt="octocat">
-            <p class="indexparagraph">
-                Bla bla bla om CSS layouts
-            </p>
-            <a href="csslayouts.html">Les mer!</a>
-        </article>
-        
 
     </main>
     <aside>
@@ -64,10 +60,11 @@
         <section id="knappgithub">
             <a href="http://www.letmegooglethat.com/?q=What+is+github%3F">Hva er Github?</a>
         </section>
+        
     </aside>
 
     <footer>
-        <p>Copyright &copy; 2018. Thomas Eidsvaag <a href="mailto:thomas.a.eidsvaag@hiof.no">Thomas.a.eidsvaag@hiof.no</a></p>
+        <p>All rights reserved. Copyright &copy; 2018. Thomas Eidsvaag</p>
     </footer>
 </body>
 </html>

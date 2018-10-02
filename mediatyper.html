@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Oblig 2</title>
     <link rel="stylesheet" type="text/css" href="stilsett/hovedstilsett.css">
+    <link href="stilsett/print.css" rel="stylesheet" media="print">
 </head>
 <body>
     <header>
@@ -17,14 +18,26 @@
         <a href="mediatyper.html">Media Typer</a>
         <a href="csslayouts.html">CSS Layouts</a>
     </nav>
-    <main class="singlearticle">
-        <article id="bigarticle">
-            <h2>Media Typer</h2>
+    <main class="artikkelmain">
+        <article id="hovedartikkel">
+            <h3 class="storartikkelh3">Media Typer</h3>
             <p id="brodtekstartikkel">
-                Github er et kraftig git verktøy. Git er et system som sporer endringer gjort
-                til software kode. Dette verktøyet gjør det mulig å kollaberere med andre utviklere
-                på samme kode, se endringene gjort til den og ta i mot feil fra brukere. Eieren av
-                et prosjekt kan også velge hva som blir lagt til i koden gjennom pull requests.
+                Media typer i HTML kan gi spesielle attributter til forskjellige elementer i HTML.
+                Du har f.eks "project", noe som gir særegne egenskaper til innholdet hvis personen på
+                siden din har lyst til å prosjektere innholdet. Eller så har vi print funksjonen,
+                som får nettsiden til å bruke et annet stilark hvis du vil printe ut innholdet av en nettside.
+                <br />
+                <br />
+                For å for eksempel bruke media typen @print, så kan man ha et eksternt stilark med attributten: " Media="print" ".
+                Det vil da si at hvis brukeren bruker "print ut" funksjonen i sin nettleser, så applier den stilarket med attributten
+                " Media="print" ". Dette gjør det mulig å kutte ned på unødvendige elementer før nettsiden blir printet ut.
+                <br />
+                <br />
+                Selv om media typer har gode ting ved seg, så er det fortsatt mange media typer som ikke blir
+                brukt. Mest på grunn av at det finnes semantiske tagger som gjør media typer en foreldet måte
+                på å gi mange av attributene som media typer kan gi. Media typer gjør heller ikke nettsider responsive,
+                noe som gjør det uaktuelt å bruke i dagens teknologiske økosystem.
+                <img class="mediatyperbilde" src="./bilder/mediatypermeme.jpg" alt="Hilarious meme, yes">
 
             </p>
         </article>

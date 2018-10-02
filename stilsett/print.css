@@ -1,0 +1,63 @@
+body { 
+    background-color: #333333;
+}
+
+p {
+    color: #ffffff; 
+}
+
+@media print {
+    html,body {
+        border-style: none;
+        border: none;
+    }
+
+    body { 
+        background-color: #ffffff;
+        border-style: none;
+    }
+
+    header {
+        display: none;
+    }
+
+    nav {
+        display: none;
+    }
+
+    aside {
+        display: none;
+    }
+
+    main article#hovedartikkel {
+        border-style: none;
+    }
+
+    main.artikkelmain{
+        color: black;
+        border-style: none;
+    }
+
+    h2 {
+        border-style: none;
+    }
+
+    img.githubbilde1 {
+        width: 550px;
+    }
+
+    p#brodtekstartikkel {
+        color: black;
+        width: 600px;
+        border-style: none;
+        margin: 0 auto;
+    }
+
+    .githubbilde1 {
+        width: 100%;
+    }
+
+    footer {
+        display: none;
+    }
+}
